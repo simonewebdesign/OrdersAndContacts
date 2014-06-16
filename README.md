@@ -127,6 +127,7 @@ irb(main):028:0>
 
 The generated database schema is as follows:
 
+```
                                      Table "companies"
    Column   |            Type             |                       Modifiers
 ------------+-----------------------------+--------------------------------------------------------
@@ -173,4 +174,4 @@ Indexes:
  updated_at | timestamp without time zone |
 Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
-
+```
