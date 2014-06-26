@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616093243) do
+ActiveRecord::Schema.define(version: 20140617112447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(version: 20140616093243) do
     t.datetime "updated_at"
   end
 
+  create_table "employees", force: true do |t|
+    t.float    "salary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
     t.integer  "contact_id"
     t.datetime "created_at"
@@ -40,6 +46,8 @@ ActiveRecord::Schema.define(version: 20140616093243) do
   add_index "orders", ["contact_id"], name: "index_orders_on_contact_id", using: :btree
 
   create_table "people", force: true do |t|
+    t.integer  "as_person_id"
+    t.string   "as_person_type"
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"

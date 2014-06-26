@@ -43,6 +43,11 @@ end
 
 class Person < ActiveRecord::Base
   acts_as :contact
+  acts_as_superclass
+end
+
+class Employee < ActiveRecord::Base
+  acts_as :person
 end
 
 class Company < ActiveRecord::Base
